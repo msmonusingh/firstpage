@@ -30,8 +30,6 @@
 }
 
 body{
-  width: var(--page-width);
-  height: var(--page-height);
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -39,7 +37,11 @@ body{
   color: #444;
   hyphens: auto;
 }
-
+.wrapper {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    display: flex;
+}
 h1, h2, h3{
   margin: 0;
   color: #000;
@@ -50,18 +52,15 @@ li{
 }
 
 #main{
-  float: left;
   width: var(--main-width);
   padding: 0.25in 0.25in 0 0.25in;
   font-size: 7pt;
 }
 
 #sidebar{
-  float: right;
   position: relative; /* for disclaimer */
   width: var(--sidebar-width);
-  height: 100%;
-  padding: 0.6in var(--sidebar-horizontal-padding);
+  padding: 0.25in 0.25in 0 0.25in;
   background-color: #f2f2f2;
   font-size: 8.5pt;
 }
@@ -324,7 +323,7 @@ li{
   font-size: 11pt;
 }
 
-.side-block{
+.side-block:not(:first-child){
   margin-top: 0.5in;
 }
 
